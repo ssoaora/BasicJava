@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/homeStudy/homeStudy.iml" filepath="$PROJECT_DIR$/homeStudy/homeStudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/inClass/inClass.iml" filepath="$PROJECT_DIR$/inClass/inClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/workspace.iml" filepath="$PROJECT_DIR$/.idea/workspace.iml" />
+    </modules>
+  </component>
+</project>
