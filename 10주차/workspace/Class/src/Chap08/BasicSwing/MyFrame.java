@@ -1,3 +1,5 @@
+package Chap08.BasicSwing;
+
 // Step 1
 import java.awt.*;  // *은 모든 클래스만 불러옴 (패키지는 X)
 import java.awt.event.*;
@@ -26,7 +28,6 @@ public class MyFrame extends JFrame {
   public static void main(String[] args) {
     // Step 3
     new MyFrame();  // 생성자 실행
-
   }
 
 }
