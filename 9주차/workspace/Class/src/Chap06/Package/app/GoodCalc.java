@@ -1,5 +1,6 @@
-package app;
-import lib.Calculator;
+package Chap06.Package.app;
+
+import Chap06.Package.lib.Calculator;
 
 public class GoodCalc extends Calculator {
   public int add(int a, int b) {

@@ -1,4 +1,4 @@
-package lib;
+package Chap06.Package.lib;
 
 public abstract class Calculator {
   public abstract int add(int a, int b);
