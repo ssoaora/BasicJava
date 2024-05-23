@@ -1,10 +1,11 @@
+package Chap09.EventListener;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-import javax.swing.event.*;
 
-public class MyFrame extends JFrame {
-  public MyFrame() {
+public class BasicEventListenerEx extends JFrame {
+  public BasicEventListenerEx() {
     this.setTitle("Event Listener Example");
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -49,7 +50,7 @@ public class MyFrame extends JFrame {
   */
 
   public static void main(String[] args) {
-    new MyFrame();
+    new BasicEventListenerEx();
   }
 }
 
