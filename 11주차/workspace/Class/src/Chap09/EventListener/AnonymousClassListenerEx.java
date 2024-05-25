@@ -4,8 +4,8 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class BasicEventListenerEx extends JFrame {
-  public BasicEventListenerEx() {
+public class AnonymousClassListenerEx extends JFrame {
+  public AnonymousClassListenerEx() {
     this.setTitle("Event Listener Example");
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -32,41 +32,7 @@ public class BasicEventListenerEx extends JFrame {
     this.setVisible(true);
   }
 
-  /*
-  내부 클래스 작성
-  private class MyActionListener implements ActionListener {
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-      JButton button = (JButton) e.getSource();
-      if (button.getText().equals("Action")) {
-        button.setText("액션");
-      }
-      else {
-        button.setText("Action");
-      }
-    }
-  }
-  */
-
   public static void main(String[] args) {
-    new BasicEventListenerEx();
+    new AnonymousClassListenerEx();
   }
 }
-
-/*
-독립 클래스 작성
-class MyActionListener implements ActionListener {
-
-  @Override
-  public void actionPerformed(ActionEvent e) {
-    JButton button = (JButton) e.getSource();
-    if (button.getText().equals("Action")) {
-      button.setText("액션");
-    }
-    else {
-      button.setText("Action");
-    }
-  }
-}
-*/
