@@ -1,11 +1,11 @@
-package Chap09.EventListener;
+package Chap09.MouseListener;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.event.*;
 
-public class MouseEventEx extends JFrame {
+public class MouseListenerEx extends JFrame {
 
   // 접근 범위를 전역으로 설정
   JLabel lbl = new JLabel("Hello");
@@ -44,7 +44,7 @@ public class MouseEventEx extends JFrame {
   }
   */
 
-  public MouseEventEx() {
+  public MouseListenerEx() {
     this.setTitle("Mouse Event Example");
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -63,22 +63,18 @@ public class MouseEventEx extends JFrame {
 
       @Override
       public void mousePressed(MouseEvent e) {
-
       }
 
       @Override
       public void mouseReleased(MouseEvent e) {
-
       }
 
       @Override
       public void mouseEntered(MouseEvent e) {
-
       }
 
       @Override
       public void mouseExited(MouseEvent e) {
-
       }
 
     });
@@ -117,6 +113,6 @@ public class MouseEventEx extends JFrame {
   */
 
   public static void main(String[] args) {
-    new MouseEventEx();
+    new MouseListenerEx();
   }
 }
