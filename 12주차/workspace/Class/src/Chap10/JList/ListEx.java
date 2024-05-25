@@ -9,7 +9,7 @@ public class ListEx extends JFrame {
 	private ImageIcon[] images = { new ImageIcon("images/icon1.png"), new ImageIcon("images/icon2.png"), new ImageIcon("images/icon3.png"), new ImageIcon("images/icon4.png") };
 
 	public ListEx() {
-		this.setTitle("예제");
+		this.setTitle("JList<E> 예제");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 		Container cp = getContentPane();
