@@ -2,6 +2,8 @@ package Chap10.JButton;
 
 import java.awt.Container;
 import java.awt.FlowLayout;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class ButtonEx extends JFrame {
@@ -13,7 +15,16 @@ public class ButtonEx extends JFrame {
 		Container cp = getContentPane();
 		cp.setLayout(new FlowLayout());
 
-		this.setSize(260, 200);
+		ImageIcon normalIcon = new ImageIcon("images/tree.jpg");
+		ImageIcon rolloverIcon = new ImageIcon("images/earth.jpg");
+		ImageIcon pressedIcon = new ImageIcon("images/bear.jpg");
+
+		JButton btn = new JButton("Test", normalIcon);
+		btn.setPressedIcon(pressedIcon);
+		btn.setRolloverIcon(rolloverIcon);
+		cp.add(btn);
+
+		this.setSize(500, 500);
 		this.setVisible(true);
 	}
 
