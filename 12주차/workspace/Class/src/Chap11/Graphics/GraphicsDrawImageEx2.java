@@ -5,7 +5,7 @@ import javax.swing.*;
 
 public class GraphicsDrawImageEx2 extends JFrame {
   public GraphicsDrawImageEx2() {
-    this.setTitle("패널읭 크기에 맞추어 이미지 그리기");
+    this.setTitle("패널의 크기에 맞추어 이미지 그리기");
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     setContentPane(new MyPanel());
