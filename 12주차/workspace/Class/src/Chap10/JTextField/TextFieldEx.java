@@ -1,10 +1,7 @@
 package Chap10.JTextField;
 
-import java.awt.Container;
-import java.awt.FlowLayout;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
+import java.awt.*;
+import javax.swing.*;
 
 public class TextFieldEx extends JFrame {
 

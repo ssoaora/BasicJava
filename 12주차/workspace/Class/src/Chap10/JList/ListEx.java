@@ -15,14 +15,14 @@ public class ListEx extends JFrame {
 		Container cp = getContentPane();
 		cp.setLayout(new FlowLayout());
 
-		JList<String> strList = new JList<String>(fruits);
+		JList<String> strList = new JList<>(fruits);
 		cp.add(strList);
 
-		JList<ImageIcon> imageList = new JList<ImageIcon>();
+		JList<ImageIcon> imageList = new JList<>();
 		imageList.setListData(images);
 		cp.add(imageList);
 
-		JList<String> scrollList = new JList<String>(fruits);
+		JList<String> scrollList = new JList<>(fruits);
 		cp.add(new JScrollPane(scrollList));
 
 		this.setSize(300, 300);
