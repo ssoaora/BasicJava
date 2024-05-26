@@ -1,13 +1,12 @@
 package Chap11.Graphics;
 
 import java.awt.*;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+import java.awt.event.*;
 import javax.swing.*;
 
 public class GraphicsDrawShapeEx extends JFrame {
 
-	JPanel[] panels = new JPanel[3];
+	JPanel[] panels = new JPanel[5];
 	int currentPanelIndex = 0;
 
 	public GraphicsDrawShapeEx() {
@@ -17,6 +16,8 @@ public class GraphicsDrawShapeEx extends JFrame {
 		panels[0] = new CirclePanel();
 		panels[1] = new RectPanel();
 		panels[2] = new RoundRectPanel();
+		panels[3] = new ArcPanel();
+		panels[4] = new PolygonPanel();
 
 		setContentPane(panels[0]);
 
@@ -73,6 +74,28 @@ public class GraphicsDrawShapeEx extends JFrame {
 
 			g.setColor(Color.RED);
 			g.drawRoundRect(20, 20, 120, 80, 40, 60);
+		}
+	}
+
+	private class ArcPanel extends JPanel {
+		@Override
+		protected void paintComponent(Graphics g) {
+			super.paintComponent(g);
+
+			g.setColor(Color.RED);
+			g.drawArc(20, 100, 80, 80, 90, 270);
+		}
+	}
+
+	private class PolygonPanel extends JPanel {
+		@Override
+		protected void paintComponent(Graphics g) {
+			super.paintComponent(g);
+
+			g.setColor(Color.RED);
+			int[] x = {80, 40, 80, 120};
+			int[] y = {40, 120, 200, 120};
+			g.drawPolygon(x, y, 4);
 		}
 	}
 
