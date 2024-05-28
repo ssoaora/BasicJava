@@ -1,10 +1,7 @@
 package Chap10.JButton;
 
-import java.awt.Container;
-import java.awt.FlowLayout;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
+import java.awt.*;
+import javax.swing.*;
 
 public class ButtonEx extends JFrame {
 

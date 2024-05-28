@@ -1,10 +1,12 @@
-package Chap12.RunnableEx;
+package Chap12.Test;
 
 import java.awt.*;
+import java.awt.event.*;
 import javax.swing.*;
 
-class TimerThread implements Runnable {
+class TimerThread extends Thread {
   private JLabel timerLabel;
+
   public TimerThread(JLabel timerLabel) {
     this.timerLabel = timerLabel;
   }
@@ -17,7 +19,7 @@ class TimerThread implements Runnable {
       n++;
 
       try {
-        Thread.sleep(1000);
+        sleep(1000);
       }
       catch (InterruptedException e) {
         return;
@@ -26,29 +28,28 @@ class TimerThread implements Runnable {
   }
 }
 
-public class RunnableEx extends JFrame {
+public class ThreadTimerEx extends JFrame {
 
-  public RunnableEx() {
+  public ThreadTimerEx() {
     this.setTitle("Thread를 상속받은 타이머 스레드 예제");
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     Container cp = getContentPane();
     cp.setLayout(new FlowLayout());
 
-    JLabel timerLabel = new JLabel("0");
-    timerLabel.setFont(new Font("Gothic", Font.ITALIC, 80));
+    JLabel timerLabel = new JLabel();
+    timerLabel.setFont(new Font("Gothic", Font.ITALIC, 160));
     cp.add(timerLabel);
 
-    // 객체 생성 방법이 다르다.
-    Thread th = new Thread(new TimerThread(timerLabel));
-    th.start();
+    TimerThread th = new TimerThread(timerLabel);
 
-    this.setSize(300, 150);
+    this.setSize(500, 300);
     this.setVisible(true);
+
+    th.start();
   }
 
   public static void main(String[] args) {
-    new RunnableEx();
+    new ThreadTimerEx();
   }
-
 }

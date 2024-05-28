@@ -1,4 +1,4 @@
-package Chap12.Thread;
+package Chap12.ThreadEx;
 
 class TimerThread extends Thread {
   int n = 0;
