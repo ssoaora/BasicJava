@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public class VibratingFrame extends JFrame implements Runnable {
 
-  private Thread th;
+  private Thread th;  // 이벤트 리스너의 익명 클래스에서 접근 가능하도록 설정
 
   public VibratingFrame() {
     this.setTitle("진동하는 프레임 만들기");
@@ -16,7 +16,7 @@ public class VibratingFrame extends JFrame implements Runnable {
     this.setSize(500, 500);
     this.setVisible(true);
 
-    getContentPane().addMouseListener(new MouseAdapter() {
+    this.getContentPane().addMouseListener(new MouseAdapter() {
       @Override
       public void mousePressed(MouseEvent e) {
         if (th != null && th.isAlive()) {
@@ -49,7 +49,7 @@ public class VibratingFrame extends JFrame implements Runnable {
 
       int x = this.getX() + r.nextInt()%5;
       int y = this.getY() + r.nextInt()%5;
-      setLocation(x, y);
+      this.setLocation(x, y);
     }
   }
 
