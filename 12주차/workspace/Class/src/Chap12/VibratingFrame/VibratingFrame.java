@@ -47,8 +47,8 @@ public class VibratingFrame extends JFrame implements Runnable {
         return;
       }
 
-      int x = this.getX() + r.nextInt()%5;
-      int y = this.getY() + r.nextInt()%5;
+      int x = this.getX() + r.nextInt() % 5;
+      int y = this.getY() + r.nextInt() % 5;
       this.setLocation(x, y);
     }
   }
