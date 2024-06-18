@@ -20,12 +20,14 @@ public class MenuEx extends JFrame {
 	}
 
 	private void createMenu() {
+		
 		JMenuBar mb = new JMenuBar();
 		JMenuItem[] menuItem = new JMenuItem[4];
 		String[] itemTitle = {"Load", "Hide", "ReShow", "Exit"};
 		JMenu screenMenu = new JMenu("Screen");
 
 		MenuActionListener listener = new MenuActionListener();
+
 		for (int i = 0; i < menuItem.length; i++) {
 			menuItem[i] = new JMenuItem(itemTitle[i]);
 			menuItem[i].addActionListener(listener);
@@ -41,7 +43,9 @@ public class MenuEx extends JFrame {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
+			
 			String cmd = e.getActionCommand();
+
 			switch (cmd) {
 				case "Load":
 					if (imgLabel.getIcon() != null) {
